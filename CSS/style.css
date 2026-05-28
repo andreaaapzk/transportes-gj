@@ -1,0 +1,311 @@
+@font-face {
+    font-family: 'my font';
+    src: url('../Fonts/Champagne\ &\ Limousines\ Bold.ttf');
+}
+
+.fuente {
+    font-family: my font;
+}
+
+@font-face {
+    font-family: mi fuente;
+    src: url('../Fonts/LEMONMILK-Medium.otf');
+}
+
+.font {
+    font-family: mi fuente;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+@media (max-width:768px){
+
+    .display-1{
+        font-size: 2.5rem;
+    }
+
+    .display-2{
+        font-size: 2rem;
+    }
+
+    .display-5{
+        font-size: 2rem;
+    }
+
+    p{
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    .carousel-item img{
+        height: 300px;
+    }
+
+    .titulo-principal{
+        font-size: 2.5rem;
+    }
+}
+
+.col-12{
+    margin-bottom: 25px;
+}
+
+.card-servicio{
+    background-color: white;
+    color: #333;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    height: 100%;
+}
+/* Efecto de las cards */
+
+.card-servicio:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.titulo-seccion{
+    font-size: 3rem;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.titulo-principal{
+    font-size: 4rem;
+    margin-bottom: 30px;
+    color: #1f1f1f;
+}
+
+.nav-custom{
+    background-color: #48728a;
+    padding: 15px 40px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+
+.nav-link{
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.nav-link:hover{
+    color: #d9d9d9 !important;
+    transform: translateY(-2px);
+}
+
+.nav-link.active{
+    border-bottom: 2px solid white;
+}
+
+.logo-navbar {
+    width: 65px;
+    height: auto;
+    animation: flotarLogo 4s ease-in-out infinite;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0px 4px 10px rgba(255,255,255,0.15));
+}
+
+.logo-navbar:hover {
+    transform: scale(1.08);
+    filter: drop-shadow(0px 6px 15px rgba(255,255,255,0.3));
+}
+
+@keyframes flotarLogo {
+
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-4px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.carousel{
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.carousel-container{
+    max-width: 1100px;
+    margin: auto;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.carousel-item img{
+    height: 600px;
+    object-fit: cover;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 50%;
+    padding: 20px;
+}
+
+.texto-acerca,
+.fuente{
+    text-align: justify;
+    line-height: 1.8;
+    color: #000000;
+}
+
+.contacto-section{
+    background-color: white;
+}
+
+.contacto-icon{
+    font-size: 3rem;
+    color: #48728a;
+}
+
+.btn-contacto{
+    background: transparent;
+    border: 2px solid #48728a;
+    color: #48728a;
+    padding: 10px 22px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.btn-contacto:hover{
+    background-color: #48728a;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.linea-titulo{
+    width: 220px;
+    height: 5px;
+    background-color: #5b7f96;
+    margin: 25px auto 45px;
+    border-radius: 20px;
+}
+
+section{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.card-link{
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-link:hover{
+    color: inherit;
+}
+
+/* FLIP CARDS */
+
+.flip-card{
+background: transparent;
+width: 100%;
+height: 320px;
+perspective: 1000px;
+}
+
+.flip-card-inner{
+position: relative;
+width: 100%;
+height: 100%;
+text-align: center;
+transition: transform 0.8s;
+transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner{
+transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back{
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+border-radius: 25px;
+padding: 30px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+box-shadow: 0 10px 25px rgba(0,0,0,0.10);
+}
+
+.flip-card-front{
+background: white;
+}
+
+.flip-card-back{
+background: #48728a;
+color: white;
+transform: rotateY(180deg);
+}
+
+.flip-card-front h2,
+.flip-card-back h3{
+font-size: 2rem;
+}
+
+.flip-card-back p{
+font-size: 15px;
+line-height: 1.7;
+}
+
+/* TRANSICIÓN ENTRE PÁGINAS */
+
+@view-transition {
+    navigation: auto;
+}
+
+::view-transition-old(root) {
+    animation: fadeOut 0.7s ease forwards;
+}
+
+::view-transition-new(root) {
+    animation: fadeIn 0.7s ease forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
