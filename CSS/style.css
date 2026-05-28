@@ -8,29 +8,6 @@
     src: url('../Fonts/LEMONMILK-Medium.otf');
 }
 
-html{
-    scroll-behavior: smooth;
-}
-
-html,
-body{
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    background-color: #f5f5f5;
-}
-
-body{
-    position: relative;
-}
-
-img{
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
 .fuente{
     font-family: 'my font';
 }
@@ -39,30 +16,42 @@ img{
     font-family: 'mi fuente';
 }
 
-.container,
-.container-fluid{
-    width: 100%;
-    max-width: 100%;
+html,
+body{
     overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
 }
 
-.row{
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
-section{
-    padding-top: 80px;
-    padding-bottom: 80px;
-}
-
-p{
-    line-height: 1.8;
-}
 
 .nav-custom{
     background-color: #48728a;
-    padding: 10px 20px;
+    padding: 15px 40px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.nav-link{
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.nav-link:hover{
+    color: #d9d9d9 !important;
+    transform: translateY(-2px);
+}
+
+.nav-link.active{
+    border-bottom: 2px solid white;
 }
 
 .logo-navbar{
@@ -78,51 +67,47 @@ p{
     filter: drop-shadow(0px 6px 15px rgba(255,255,255,0.3));
 }
 
-.nav-link{
-    font-size: 1rem;
-    font-weight: 500;
-    margin: 0 10px;
-    transition: 0.3s ease;
-}
-
-.nav-link:hover{
-    color: #d9d9d9 !important;
-    transform: translateY(-2px);
-}
-
-.nav-link.active{
-    border-bottom: 2px solid white;
-}
 
 .titulo-principal{
     font-size: 4rem;
     margin-bottom: 30px;
     color: #1f1f1f;
     text-align: center;
-    word-break: break-word;
 }
 
 .titulo-seccion{
-    font-size: 3rem;
+    font-size: 2rem;
     margin-top: 15px;
-    margin-bottom: 15px;
-    text-align: center;
+    margin-bottom: 20px;
 }
 
 .linea-titulo{
     width: 220px;
     height: 5px;
     background-color: #5b7f96;
-    margin: 25px auto 45px auto;
+    margin: 25px auto 45px;
     border-radius: 20px;
 }
 
-.texto-acerca,
-.fuente{
+
+.texto-acerca{
     text-align: justify;
-    line-height: 1.8;
-    color: #000000;
+    line-height: 2;
+    color: #000;
+    font-size: 1.3rem;
+    max-width: 1100px;
+    margin: auto;
 }
+
+section{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.col-12{
+    margin-bottom: 25px;
+}
+
 
 .carousel{
     border-radius: 25px;
@@ -154,16 +139,11 @@ p{
 .card-servicio{
     background-color: white;
     color: #333;
-    border-radius: 25px;
-    padding: 35px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    transition: 0.3s ease;
-    width: 100%;
-    max-width: 350px;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
     height: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
 }
 
 .card-servicio:hover{
@@ -179,6 +159,7 @@ p{
 .card-link:hover{
     color: inherit;
 }
+
 
 .contacto-section{
     background-color: white;
@@ -207,21 +188,22 @@ p{
     transform: translateY(-2px);
 }
 
+
 .flip-card{
-    background-color: transparent;
+    background: transparent;
     width: 100%;
     max-width: 350px;
     height: 320px;
     perspective: 1000px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
 }
 
 .flip-card-inner{
     position: relative;
     width: 100%;
     height: 100%;
-    transition: transform 0.7s ease;
+    text-align: center;
+    transition: transform 0.8s;
     transform-style: preserve-3d;
 }
 
@@ -234,49 +216,35 @@ p{
     position: absolute;
     width: 100%;
     height: 100%;
-    top: 0;
-    left: 0;
-    border-radius: 25px;
-    overflow: hidden;
     backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-
+    border-radius: 25px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    padding: 30px;
-    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.10);
 }
 
 .flip-card-front{
-    background-color: white;
-    color: black;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    background: white;
 }
 
 .flip-card-back{
-    background-color: #5b7f96;
+    background: #48728a;
     color: white;
     transform: rotateY(180deg);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.flip-card-front h2,
+.flip-card-back h3{
+    font-size: 2rem;
 }
 
 .flip-card-back p{
-    text-align: center;
+    font-size: 15px;
     line-height: 1.7;
-}
-
-.row.justify-content-center{
-    justify-content: center !important;
-}
-
-.col-12,
-.col-md-6,
-.col-lg-4{
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
 @keyframes flotarLogo{
@@ -332,7 +300,8 @@ p{
     }
 }
 
-@media (max-width: 768px){
+
+@media (max-width:768px){
 
     .display-1{
         font-size: 2.5rem;
@@ -346,28 +315,20 @@ p{
         font-size: 2rem;
     }
 
-    p{
-        font-size: 0.95rem;
-        line-height: 1.7;
-    }
-
-    .logo-navbar{
-        width: 50px;
-    }
+    p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
 
     .titulo-principal{
-        font-size: 2.3rem;
-        line-height: 1.1;
-        padding-left: 10px;
-        padding-right: 10px;
+        font-size: 2.5rem;
     }
 
-    .titulo-seccion{
-        font-size: 2.2rem;
-    }
-
-    .linea-titulo{
-        width: 160px;
+    .texto-acerca{
+        font-size: 1rem;
+        line-height: 1.8;
+        padding: 0 10px;
     }
 
     .carousel-item img{
@@ -375,33 +336,15 @@ p{
         object-fit: cover;
     }
 
-    .row{
-        display: flex;
-        justify-content: center !important;
-        align-items: center;
+    .nav-custom{
+        padding: 12px 20px;
     }
 
-    .col-12,
-    .col-md-6,
-    .col-lg-4{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        padding-left: 12px !important;
-        padding-right: 12px !important;
-        margin-bottom: 25px;
+    .logo-navbar{
+        width: 50px;
     }
 
-    .card-servicio,
     .flip-card{
-        width: 100%;
-        max-width: 340px;
-        margin-left: auto !important;
-        margin-right: auto !important;
-    }
-
-    .texto-acerca,
-    .fuente{
-        text-align: center;
+        max-width: 100%;
     }
 }
